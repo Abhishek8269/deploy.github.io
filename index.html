@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        input[type="button"]
+        {
+            width: 90px;
+            height: 80px;
+        }
+        input [type="text"]
+        {
+           width: 800px; 
+           height: 800px;
+        }
+    </style>
+   
+    
+</head>
+<body>
+
+     <script>
+        function pick (val)
+        {
+            document.getElementById("a").value +=val;
+        }
+        function clr (val)
+        {
+            document.getElementById("a").value ="";
+        }
+        function solve ()
+        {
+           var x=document.getElementById("a").value;
+           var y=eval (x);
+           document.getElementById("a").value=y;
+        }
+     </script>
+
+    <div style="background-color: rgb(77, 66, 74); width: 440px; height: 440px; margin-left: 100px; margin-top: 100px;">
+
+    <table>
+        <tr >
+            <th colspan="3"><input type="text" style="height: 72px; width:300px; font-size: xx-large; border-radius: 10px;" id="a" >
+            <th><input type="button" value="Ac" onclick="clr()" style="font-size: x-large;border-radius: 10px;">
+
+            
+        </tr>
+        <tr> 
+            <th><input type="button" value="1"onclick="pick(1)" style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="2"onclick="pick(2)"style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="3"onclick="pick(3)"style="font-size: x-large;border-radius: 10px;"> 
+            <th><input type="button" value="/"onclick="pick('/')"style="font-size: x-large;border-radius: 10px;">      
+        </tr>
+        <tr> 
+            <th><input type="button" value="4"onclick="pick(4)"style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="5"onclick="pick(5)"style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="6"onclick="pick(6)"style="font-size: x-large;border-radius: 10px;"> 
+            <th><input type="button" value="*"onclick="pick('*')"style="font-size: x-large;border-radius: 10px;">      
+        </tr>
+
+        <tr> 
+            <th><input type="button" value="7"onclick="pick(7)"style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="8"onclick="pick(8)"style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="9"onclick="pick(9)"style="font-size: x-large;border-radius: 10px;"> 
+            <th><input type="button" value="-"onclick="pick('-')"style="font-size: x-large;border-radius: 10px;">      
+        </tr>
+
+        <tr> 
+            <th><input type="button" value="."onclick="pick('.')"style="font-size: xxx-large;border-radius: 10px;  " >
+            <th><input type="button" value="0"onclick="pick(0)"style="font-size: x-large;border-radius: 10px;">
+            <th><input type="button" value="="onclick="solve()"style="font-size: x-large;border-radius: 10px;"> 
+            <th><input type="button" value="+"onclick="pick('+')"style="font-size: x-large;border-radius: 10px;">      
+        </tr>
+
+    </table>
+</div>
+    
+    
+</body>
+</html>
